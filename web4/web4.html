@@ -18,9 +18,13 @@
     <script>
         $(function(){
     $('#main_nav li').mouseover(function(){
-        $('.sub_nav').stop().fadeIn(500)
+        $('.sub_nav').stop().fadeIn()
+        $('.nav_bg').stop().fadeIn()
+        $('header').addClass('nav_scroll')
     }).mouseout(function(){
-        $('.sub_nav').stop().fadeOut(500)
+        $('.sub_nav').stop().fadeOut()
+        $('.nav_bg').stop().fadeOut()
+        // $('header').removeClass('nav_scroll')
     })
 })
     </script>
@@ -108,13 +112,29 @@
             })
         })
     </script>
+
+    <script>
+        $(window).scroll(function(){
+          var scrollTop = $(window).scrollTop();
+          if(scrollTop != 0) $('header').addClass('nav_scroll')
+                            //  $('.scroll_img').css('display', block);
+          else $('header').removeClass('nav_scroll');
+      });
+    //   $(window).scroll(function(){
+    //       var scrollTop = $(window).scrollTop();
+    //       if(scrollTop != 0) $('#logo').addClass('scroll_img')
+    //       else $('#logo').removeClass('scroll_img');
+    //   });
+    </script>
 </head>
 <body>
     <div id="wrap">
         <header>
             <nav>
                 <div id="logo">
-                    <h1>POSCO</h1>
+                    <!-- <h1>POSCO</h1> -->
+                    <a href="web4.html"><img src="img/posco31.png" class="kk"></a>
+                    <!-- <a href="web4.html" class="scroll_img"><img src="img/posco31_3.png" ></a> -->
                 </div>
                 <ul id="main_nav">
                     <li><a href="#">회사소개</a>
@@ -163,7 +183,7 @@
                         <ul class="sub_nav">
                             <li><a href="#">비윤리 신고</a></li>
                             <li><a href="#">갑질행위 신고</a></li>
-                            <li><a href="#">직장 내 괴롭힘, 성희로<br>상담 및 신고</a></li>
+                            <li><a href="#">직장 내 괴롭힘, 성희롱<br> 상담 및 신고</a></li>
                             <li><a href="#">공정거래 상담 및 신고</a></li>
                             <li><a href="#">윤리딜레마 상담</a></li>
                         </ul>
@@ -180,6 +200,8 @@
                     </li>
                 </ul>
             </nav>
+            <div class="nav_bg">
+            </div>
         </header>
         <main>
             <section id="section1">
@@ -543,9 +565,9 @@
         <footer>
             <div id="footer_box1">
                 <div>
-                    <a href="web4.html"><h1>POSCO</h1></a>
+                    <a href="web4.html"><img src="img/posco31.png"></a>
                 </div>
-                <div>
+                <div class="footer1">
                     <ul>
                         <li><a href="#">회사소개</a></li>
                         <li><a href="#">탄소중립</a></li>
@@ -555,7 +577,7 @@
                         <li><a href="#">홍보채널</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer1">
                     <h1 style="font-weight: 800;">고객지원</h1>
                     <ul>
                         <li><a href="#">공지사항</a></li>
@@ -566,12 +588,12 @@
                         <li><a href="#">일일방문신청</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer1">
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fab fa-facebook-f"></i></a>
                 </div>
-                <div>
+                <div class="footer1">
                     <select name="" id="">
                         <option value="">포스코그룹 바로가기</option>
                         <option value="">포스코 홀딩스</option>
@@ -603,17 +625,22 @@
 
     <script>
       var swiper = new Swiper(".mySwiper", {
-      cssMode: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
       loop: true,
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    //   },
+       autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-    //   pagination: {
-    //     el: ".swiper-pagination",
-    //   },
-      mousewheel: true,
-      keyboard: true,
     });
 
     </script>

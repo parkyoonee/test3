@@ -18,16 +18,21 @@ header{
     line-height: 70px;
     position: fixed;
     z-index: 99;
+    color: #ffffff;
 }
 header nav{
     width: 70%;
     display: flex;
     margin: 0 auto;
-    
+    z-index: 9;
 }
 header nav #logo{
     width: 20%;
-    color: white;
+    position: relative;
+}
+header nav #logo img{
+    width: 60%;
+    margin-top: 7%;
 }
 header nav ul{
     width: 80%;
@@ -36,21 +41,64 @@ header nav ul{
 header nav>#main_nav>li{
     display: inline-block;
     width: 13%;
-    color: white;
+    color: inherit;
     font-size: 1rem;
     font-weight: 800;
     text-align: center;
+    z-index: 99;
+    margin-left: 4px;
+}
+header nav>#main_nav>li:hover a{
+    color: #005891;
 }
 header nav .sub_nav{
     width: 13.7%; 
     /* background: #012765;  */
     position: absolute; top: 70px;
     display: none; 
-    line-height: 3; 
-    font-size: 0.9rem; color: white; }
+    line-height: 1;
+    font-size: 0.85rem; color: black;
+    border-right: 2px solid #b1b1b1;
+    height: 30vh;
+    padding-top: 1.5%;
+}
 header nav .sub_nav>li>a{
     text-align: center; 
-    display: block;}
+    display: block;
+    color: #000000;
+    margin-bottom: 20%;
+    margin-left: 2px;
+}
+header nav .sub_nav>li>a:hover{
+    /* color: #005891; */
+    /* background: #005891;
+    color: white; */
+}
+.nav_scroll{
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px #000000;
+    color: #000000;
+    z-index: 9999;
+}
+/* .nav_scroll li:hover a{
+    border-bottom: black 2px solid;
+} */
+.scroll_img{
+    position: absolute;
+    left: 0;
+}
+.scroll_img img{
+    display: none;
+}
+.nav_bg{
+    width: 100%;
+    height: 32vh;
+    background: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 71px;
+    z-index: -100;
+    display: none;
+}
 
 
 
@@ -119,7 +167,6 @@ main #section2 ul li{
 main #section2>ul>li>a>img{
     width: 100%;
     height: 100%;
-    
 }
 main #section2 ul li p{
     text-align: left;
@@ -135,11 +182,15 @@ main #section2 ul li p{
 }
 main #section2 ul li p i{
     position: absolute;
-    right: 0;
+    right: 10%;
 }
 main #section2 ul li:hover{
     color: #005891;
     text-decoration: underline;
+    transition: 1s;
+}
+main #section2 ul li:hover i{
+    transform: translate(2rem);
     transition: 1s;
 }
 
@@ -175,6 +226,7 @@ main #section3 .sec3_2{
 main #section3 .sec3_2 div{
     width: 27%;
     /* margin: 0 auto; */
+    text-align: center;
 }
 main #section3 .sec3_2 div img{
     width: 100%;
@@ -506,6 +558,9 @@ footer #footer_box1{
     margin: 0 auto;
     display: flex;
 }
+footer #footer_box1 img{
+    width: 80%;
+}
 footer #footer_box1 div{
     width: 25%;
     padding: 2%;
@@ -520,8 +575,8 @@ footer #footer_box1 i{
     padding:8.6%;
 }
 footer #footer_box1 select{
-    width: 200px;
-    height: 35px;
+    width: 100%;
+    height: 20%;
     text-align: center;
     font-size: 0.9rem;
     font-weight: 800;
@@ -549,4 +604,32 @@ footer #footer_box2 ul li{
 footer #footer_box2 p{
     font-size: 0.9rem;
 
+}
+
+
+
+
+@media screen and (max-width:940px){
+    header nav{width: 90%; margin: 0 auto;}
+    header nav ul {display: none;}
+    header nav #logo img{width: 100%;}
+    main #section2 ul li{display: block; width: 100%;}
+    main #section2 ul li img{width: 50%;}
+    main #section4 #sec4_wrap{display: block;}
+    main #section4 #sec4_wrap #sec4_text{width: 100%;}
+    main #section4 #sec4_wrap #sec4_mp4{display: none;}
+    main #section3 .sec3_2 .sec4_text1{top: 5%;}
+    main #section5 #sec5_list{height: 80vh;}
+    main #section5 #sec5_list>#main_list>li{width: 21%;}
+    main #section5 #sec5_list>ul>.list_on div {height: 100%;}
+    main #section5 #sec5_list>ul div ul li{width: 47%;}
+    /* footer #footer_box1{display: block;} */
+    /* footer #footer_box1 div{width: 50%; border: none;}
+    footer #footer_box1 .footer1{display: inline-block; width: 50%;}
+    footer #footer_box1 div img{width: 20%;} */
+}
+
+@media screen and (max-width:540px){
+    main #section5 #sec5_list{height: 130vh;}
+    main #section5 #sec5_list>ul div ul li{width: 100%;}
 }
