@@ -207,7 +207,7 @@ main #section1 #sec1_container #sec1_box1 p{
 #section2 #sec2_container > .line {
     width:1px; height:500px; background: #7293b4;
 }
-#section2 #sec2_container > .right2 {padding-top: 5%; width: 34%;}
+#section2 #sec2_container > .right2 {padding-top: 5%; width: 34%; position: relative;}
 #section2 #sec2_container > .right2 > .education {margin-bottom:48px;}
 #section2 #sec2_container > .right2 > .education > .top2 {display:flex; align-items: center; margin-bottom:16px;}
 #section2 #sec2_container > .right2 > .education > .top2 > p {font-size:1.1rem; color:#7293b4; font-weight:bold;}
@@ -252,6 +252,8 @@ main #section1 #sec1_container #sec1_box1 p{
     background:#7293b4; border-radius:50%;
     margin-right:15px;
 }
+.skill_arrow1{position: absolute; right: 0; bottom: 10%; font-size: 2rem; color:#7293b4; cursor: pointer;}
+.reply{position: absolute; right: 0; bottom: 10%; font-size: 2rem; color:#7293b4; display: none; cursor: pointer;}
 
 
 
@@ -289,7 +291,7 @@ main #section3 .project_box1 .project_box1_left{
   /* position: relative; */
 }
 main #section3 .project_box1 .project_box1_left .webbox{
-    width: 70%;
+    width: 60%;
     height: 380px;
     margin: 0 auto;
     border-radius:30px;
@@ -345,6 +347,18 @@ main #section3 .project_box1 .project_box1_right .site a:hover {
 
 #box_2nd{
     margin-left: 22%;
+    /* background: pink; */
+    /* position: relative; */
+}
+/* #box_2nd table{
+    position: absolute;
+    right: 10%;
+} */
+.project_line{
+    width: 80%;
+    margin: 0 auto;
+    background: gray;
+    height: 1px;
 }
 
 
