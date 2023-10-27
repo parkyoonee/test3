@@ -61,7 +61,7 @@ header nav #nav_login ul li:hover{
     text-decoration: underline;
 }
 header nav .navbar{
-    font-size: 23px;
+    font-size: 1.8rem;
     display: none;
     position: absolute;
     right: 0;
@@ -78,16 +78,20 @@ header nav .navbar{
     display: none;
 } 
 .nav_on .nav_list2{
-    /* width: 53%; */
-    font-size: 45px;
+    width: 250px;
+    height: 420px;
+    font-size: 2.9rem;
     font-weight: bold;
     text-align: center;
-    padding: 25% 0;
+    position: absolute;
+    top: calc(50% - 210px); left: calc(50% - 125px);
+    /* margin-top: -25%; margin-left: -13%; */
+    /* padding: 25% 0; */
 }
-.nav_on .nav_list2 ul li:hover{
-    text-decoration: underline;
+.nav_on .nav_list2 ul li:hover a{
+    border-bottom: 5px solid black;
 }
-.nav_on .xx{float: right; font-size: 3em; }
+.nav_on .xx{float: right; font-size: 2.2em; margin-right: 2.5%; margin-top: 18px; cursor: pointer;}
 
 
 main #section1 .sec1{
@@ -547,8 +551,10 @@ footer #footer_box2 #footer_box2_container #footer_box2_2 ul li:hover{
 
 
 @media screen and (max-width:940px){
+    header nav{width: 95%;}
     header nav .navbar{display: block;}
     header nav #nav_list{display: none;}
+    header nav #nav_logo{text-align: center; width: 100%;}
     header nav #nav_login{display: none;}
     main #section1 .sec1 .sec1_2 .sec1_imgbox img{width: 100%;}
     main #section1 .sec1 .sec1_2 .sec1_textbox{display: none;}
@@ -576,5 +582,7 @@ footer #footer_box2 #footer_box2_container #footer_box2_2 ul li:hover{
     main #section3 #sec3_container #sec3_box3 .sec_box3_text h1{font-size: 13px;}
     main #section4 #sec4_box2{display: block;}
     main #section4 #sec4_box2 div{width: 60%}
+    .nav_on .nav_list2{position: absolute; top: calc(50% - 330px); left: calc(50% - 125px);}
+    
     /* .nav_on .nav_list2{padding: 50% 0;} */
 }
