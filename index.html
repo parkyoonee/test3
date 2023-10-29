@@ -12,6 +12,14 @@
     <!--폰트어썸-->
     <script src="https://kit.fontawesome.com/183b694fdd.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="slider2.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+
+    <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=v3.11.3'></script>
+    <script src='https://assets.codepen.io/16327/ScrollTrigger.min.js'></script>
+
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="portfolio2_1.css">
     <script>
@@ -28,14 +36,15 @@
                 $('.experience').css('display', 'none')
                 $('.license').css('display', 'none')
                 $('.reply').css('display', 'block')
+                $('.skill_arrow1').css('display', 'none')
             })
 
             $('.reply').click(function(){
                 $('.education').fadeIn(500),
                 $('.experience').fadeIn(500),
                 $('.license').fadeIn(500),
-                $('reply').css('display', 'none')
-                $('.skill_arrow2').css('display', 'none')
+                $('.reply').css('display', 'none')
+                $('.skill_arrow1').css('display', 'block')
                 $('.skill').css('display', 'none')
             })
           })
@@ -70,7 +79,7 @@
                     <div id="sec1_box1">
                         <h1>Portfolio</h1>
                         <a href="#section2"><span class="name">#Park Yoon Hee</span></a>
-                        <p><i class="fa-solid fa-computer-mouse"></i> Click me !</p> 
+                        <p><i class="fa-regular fa-hand-point-up"></i> Click here !</p> 
                     </div>
                     <div id="sec1_box2">
                         <h1>2023</h1>
@@ -84,13 +93,13 @@
                             <span></span>
                             <p class="myproflie">About ME</p>
                         </div>
-                        <p><em>도전을 두려워하지 않는</em><br>신입 웹 퍼블리셔 <em>박윤희</em>입니다.</p>
+                        <p><em class="highlight4">도전을 두려워하지 않는</em><br>신입 웹 퍼블리셔 <em class="highlight5">박윤희</em> 입니다.</p>
                         <div class="left_mide2">
                             <img src="img/박윤희_프로필사진2.jpg" alt="박윤희">
                             <ul>
                                 <li><span></span><b>NAME</b>
                                     <ul class="name">
-                                        <li>박윤희</li>
+                                        <li class="highlight1">박윤희</li>
                                     </ul>
                                 </li>
                                 <li><span></span><b>BIRTH</b>
@@ -128,7 +137,7 @@
                             <ul>
                                 <li>
                                     <p>2023.11</p>
-                                    <p>UI/UX 웹퍼블리셔 양성과정 수료</p>
+                                    <p class="highlight2" style="color: #505050;">UI/UX 웹퍼블리셔 양성과정 수료</p>
                                 </li>
                                 <li>
                                     <p>2017.10</p>
@@ -164,7 +173,7 @@
                             <ul>
                                 <li>
                                     <p>2023.12</p>
-                                    <p>웹 디자인 기능사 자격증(예정)</p>
+                                    <p class="highlight3" style="color: #505050;">웹 디자인 기능사 자격증(예정)</p>
                                 </li>
                                 <li>
                                     <p>2017.05</p>
@@ -201,7 +210,7 @@
                                 </li>-->
                                 <li>
                                     <img src="img/skill5.png" alt="">
-                                    <p>이미지 색,밝기 보정 및 편집 가능합니다</p>
+                                    <p>이미지 색, 밝기 보정 및 편집 가능합니다</p>
                                 </li>
                                 <li>
                                     <img src="img/skill6.png" alt="">
@@ -223,138 +232,121 @@
                         </div>
                     </div>
                 </div>
-                <!-- <a href="#section1"><i class="fa-solid fa-circle-up scroll_up"></i></a> -->
             </section>
             <section id="section3">
                 <div class="section_name">
                     <h1>PROJECT</h1>
                 </div>
                 <div class="project_box1">
-                    <div class="project_box1_left">
-                        <!-- <img src="img/목업.png"> -->
-                        <div class="webbox">
-                            <img src="img/web3스크린샷.png" alt="">
-                        </div>
-                    </div>
-                    <div class="project_box1_right">
-                        <div class="txt">
-                            <h2>GREENPEACE</h2>
-                            <div class="project_box1_right_text">
-                                <table class="project_tb">
-                                    <tr>
-                                        <th>TYPE</th>
-                                        <td><span>반응형 웹사이트</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th>PAGE</th>
-                                        <td>Main<!-- , Login, 상세페이지--></td> 
-                                    </tr>
-                                    <tr>
-                                        <th>TOOL</th>
-                                        <td>Photoshop, HTML5, CSS3, Javascript, Jquery, git</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="contri">기여도</th>
-                                        <td><span>디자인</span> 100% <span>퍼블리싱</span> 100%</td>
-                                    </tr>
-                                    <th></th>
-                                    <td>
-                                        <div class="site">
-                                            <a href="web3/web3.html" target="_blank">Main</a>
-                                            <a href="#">Sub1</a>
-                                            <a href="#">Sub1</a>
-                                        </div>  
-                                    </td>
-                                </table>
+                    <div class="blog-slider">
+                        <div class="blog-slider__wrp swiper-wrapper">
+                          <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                              <img src="img/web3스크린샷.png" alt="">
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project_line"></div>
-                <div class="project_box1">
-                    <div class="project_box1_right">
-                        <div class="txt" id="box_2nd">
-                            <h2>dasique</h2>
-                            <div class="project_box1_right_text">
-                                <table class="project_tb">
-                                    <tr>
-                                        <th>TYPE</th>
-                                        <td><span>웹 사이트</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th>PAGE</th>
-                                        <td>Main, Login, <span>상세페이지</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th>TOOL</th>
-                                        <td>Photoshop, HTML5, CSS3, Javascript, Jquery, git</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="contri">기여도</th>
-                                        <td><span>디자인</span> 100% <span>퍼블리싱</span> 100%</td>
-                                    </tr>
-                                    <th></th>
-                                    <td>
-                                        <div class="site">
-                                            <a href="web2/web2.html" target="_blank">Main</a>
-                                            <a href="#">Sub1</a>
-                                            <a href="#">Sub1</a>
-                                        </div>  
-                                    </td>
-                                </table>
+                            <div class="blog-slider__content">
+                                <h2>GREENPEACE</h2>
+                              <!-- <span class="blog-slider__code">26 December 2019</span>
+                              <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+                              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div> -->
+                              <table class="project_tb">
+                                <tr>
+                                    <th>TYPE</th>
+                                    <td><span>웹 사이트</span></td>
+                                </tr>
+                                <tr>
+                                    <th>PAGE</th>
+                                    <td>Main, Login, <span>상세페이지</span></td>
+                                </tr>
+                                <tr>
+                                    <th>TOOL</th>
+                                    <td>Photoshop, HTML5, CSS3, Javascript, Jquery, git</td>
+                                </tr>
+                                <tr>
+                                    <th class="contri">기여도</th>
+                                    <td><span>디자인</span> 100% <span>퍼블리싱</span> 100%</td>
+                                </tr>
+                                <th></th>
+                               <td>
+                                </td>
+                            </table>
+                              <a href="#" class="blog-slider__button">VIEW MORE</a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="project_box1_left">
-                        <!-- <img src="img/목업.png"> -->
-                        <div class="webbox">
-                            <img src="img/web2스크린샷.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="project_line"></div>
-                <div class="project_box1">
-                    <div class="project_box1_left">
-                        <!-- <img src="img/목업.png"> -->
-                        <div class="webbox">
-                            <img src="img/web4스크린샷2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="project_box1_right">
-                        <div class="txt">
-                            <h2>POSCO</h2>
-                            <div class="project_box1_right_text">
-                                <table class="project_tb">
-                                    <tr>
-                                        <th>TYPE</th>
-                                        <td><span>웹 사이트</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th>PAGE</th>
-                                        <td>Main, Login, <span>상세페이지</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th>TOOL</th>
-                                        <td>Photoshop, HTML5, CSS3, Javascript, Jquery, git</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="contri">기여도</th>
-                                        <td><span>디자인</span> 100% <span>퍼블리싱</span> 100%</td>
-                                    </tr>
-                                    <th></th>
-                                    <td>
-                                        <div class="site">
-                                            <a href="web4/web4.html" target="_blank">Main</a>
-                                            <a href="#">Sub1</a>
-                                            <a href="#">Sub1</a>
-                                        </div>  
-                                    </td>
-                                </table>
+                          </div>
+                          <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                              
+                              <img src="img/web2스크린샷.png" alt="">
                             </div>
+                            <div class="blog-slider__content">
+                                <h2>dasique</h2>
+                              <!-- <span class="blog-slider__code">26 December 2019</span>
+                              <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+                              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div> -->
+                              <table class="project_tb">
+                                <tr>
+                                    <th>TYPE</th>
+                                    <td><span>웹 사이트</span></td>
+                                </tr>
+                                <tr>
+                                    <th>PAGE</th>
+                                    <td>Main, Login, <span>상세페이지</span></td>
+                                </tr>
+                                <tr>
+                                    <th>TOOL</th>
+                                    <td>Photoshop, HTML5, CSS3, Javascript, Jquery, git</td>
+                                </tr>
+                                <tr>
+                                    <th class="contri">기여도</th>
+                                    <td><span>디자인</span> 100% <span>퍼블리싱</span> 100%</td>
+                                </tr>
+                                <th></th>
+                               <td>
+                                </td>
+                            </table>
+                              <a href="#" class="blog-slider__button">VIEW MORE</a>
+                            </div>
+                          </div>
+                          
+                          <div class="blog-slider__item swiper-slide">
+                            <div class="blog-slider__img">
+                              
+                              <img src="img/web4스크린샷2.png" alt="">
+                            </div>
+                            <div class="blog-slider__content">
+                                <h2>POSCO</h2>
+                              <!-- <span class="blog-slider__code">26 December 2019</span>
+                              <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+                              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div> -->
+                              <table class="project_tb">
+                                <tr>
+                                    <th>TYPE</th>
+                                    <td><span>웹 사이트</span></td>
+                                </tr>
+                                <tr>
+                                    <th>PAGE</th>
+                                    <td>Main, Login, <span>상세페이지</span></td>
+                                </tr>
+                                <tr>
+                                    <th>TOOL</th>
+                                    <td>Photoshop, HTML5, CSS3, Javascript, Jquery, git</td>
+                                </tr>
+                                <tr>
+                                    <th class="contri">기여도</th>
+                                    <td><span>디자인</span> 100% <span>퍼블리싱</span> 100%</td>
+                                </tr>
+                                <th></th>
+                               <td>
+                                </td>
+                            </table>
+                              <a href="#" class="blog-slider__button">VIEW MORE</a>
+                            </div>
+                          </div>
+                          
                         </div>
-                    </div>
+                        <div class="blog-slider__pagination"></div>
+                      </div>
                 </div>
-                <!-- <a href="#section1"><i class="fa-solid fa-circle-up scroll_up"></i></a> -->
             </section>
             <section id="section4">
                 <div id="sec4_box1">
@@ -375,52 +367,58 @@
                         <p>yhe24@naver.com</p>
                     </div>
                 </div>
-                <a href="#section1"><i class="fa-solid fa-circle-up scroll_up"></i></a>
+                <a href="#section1"><i class="fa-solid fa-chevron-up scroll_up"></i></a>
             </section>
         </main>
         <footer></footer>
+        <div class="blog-slider__pagination"></div>
     </div>
 
     <script>
         AOS.init();
     </script>
 
-    <!-- <script>
-        // resize change height - 화면 리사이즈시 높이 변수값 변경
-let screenHeight = window.innerHeight;
-let halfHeight = screenHeight / 2;
-window.addEventListener("resize", () => {
-  screenHeight = window.innerHeight;
-  halfHeight = screenHeight / 2;
-});
+  <script>
+    window.console = window.console || function(t) {};
+ </script>
 
-// Scroll Down Event - 스크롤 다운 이벤트
-const sections = document.querySelectorAll("section");
-const sectionArrReverse = Array.from(sections).reverse();
-const header = document.querySelector("nav");
-const scrollUpBtn = document.querySelector(".scroll-up-btn");
-const scrollDownIcon = document.querySelector(".scroll-down");
+ <script>
+    var swiper = new Swiper('.blog-slider', {
+      spaceBetween: 30,
+      effect: 'fade',
+      loop: true,
+      mousewheel: {
+        invert: false,
+      },
+      // autoHeight: true,
+      pagination: {
+        el: '.blog-slider__pagination',
+        clickable: true,
+      }
+    });
+ </script>
 
-document.addEventListener("scroll", () => {
-  // current section indicate - 현재 섹션위치 표시
-  pageIndicate();
-});
-
-function pageIndicate() {
-  let height = (window.scrollY || window.pageYOffset || document.documentElement.scrollTop) + halfHeight;
-  for (let i = 0; i < sectionArrReverse.length; i++) {
-    let offsetTop = sectionArrReverse[i].offsetTop;
-    if (height > offsetTop) {
-      let currentNav = document.querySelector(".nav_on");
-      let postNav = document.querySelector(
-        `.scroll_item[data-link="#${sectionArrReverse[i].id}"]`
-      );
-      currentNav.classList.remove("nav_on");
-      postNav.classList.add("nav_on");
-      break;
-    }
-  }
-}
-    </script> -->
+<script type="module">
+    import { annotate } from 'https://unpkg.com/rough-notation?module';
+    
+    const n1 = document.querySelector('.highlight1');
+    const n2 = document.querySelector('.highlight2');
+    const n3 = document.querySelector('.highlight3');
+    // const n4 = document.querySelector('.highlight4');
+    // const n5 = document.querySelector('.highlight5');
+    
+    const a1 = annotate(n1, { type: 'highlight', color: '#7293b450', iterations: 1, multiline: true });
+    const a2 = annotate(n2, { type: 'highlight', color: '#7293b450', iterations: 1, multiline: true });
+    const a3 = annotate(n3, { type: 'highlight', color: '#7293b450', iterations: 1, multiline: true });
+    // const a4 = annotate(n4, { type: 'circle', color: '#7293b450' });
+    // const a5 = annotate(n5, { type: 'circle', color: '#7293b450' })
+    
+    a1.show();
+    a2.show();
+    a3.show();
+    // a4.show();
+    // a5.show();
+    
+  </script>
 </body>
 </html>
